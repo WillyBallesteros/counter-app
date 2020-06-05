@@ -3,6 +3,8 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     count: 1,
+    //imageUrl: "https://picsum.photos/200",
+    tags: ["tag1", "tag2", "tag3"],
   };
 
   styles = {

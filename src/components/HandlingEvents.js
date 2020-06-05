@@ -2,25 +2,24 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 1,
+    count: 0,
   };
 
-  styles = {
-    fontSize: 10,
-    fontWeight: "bold",
-  };
+  handleIncrement() {
+    console.log("Increment Clicked", this.state.count);
+    //this is undefined
+  }
 
   render() {
     return (
       <React.Fragment>
-        {/* <img src={this.state.imageUrl} alt="" /> */}
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
-        <ul>
-          {this.state.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        <button
+          onClick={this.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
       </React.Fragment>
     );
   }
